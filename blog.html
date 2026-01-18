@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT & AI Blog Tanzania | TanzaniaTech Knowledge Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .blog-hero {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .blog-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .blog-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .blog-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .blog-sidebar {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            height: fit-content;
+        }
+        
+        .blog-tag {
+            display: inline-block;
+            background: #e9ecef;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        
+        .blog-tag:hover {
+            background: var(--primary);
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-robot me-2"></i>Tanzania<span>Tech</span>
+            </a>
+        </div>
+    </nav>
+
+    <section class="blog-hero">
+        <div class="container">
+            <h1 class="display-4 mb-3">ICT & AI Knowledge Hub for Tanzania</h1>
+            <p class="lead mb-4">Practical insights, guides, and news for Tanzanian businesses embracing technology</p>
+            <div class="input-group mb-3" style="max-width: 500px;">
+                <input type="text" class="form-control form-control-lg" placeholder="Search ICT topics...">
+                <button class="btn btn-primary btn-lg" type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+                <span class="blog-tag">#TanzaniaICT</span>
+                <span class="blog-tag">#AITanzania</span>
+                <span class="blog-tag">#DigitalTransformation</span>
+                <span class="blog-tag">#SMEsTZ</span>
+                <span class="blog-tag">#Cybersecurity</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <!-- Featured Post -->
+                    <div class="blog-card mb-5">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                                 class="img-fluid w-100" alt="AI in Tanzania">
+                            <span class="blog-category">Featured</span>
+                        </div>
+                        <div class="p-4">
+                            <h2 class="mb-3">How Tanzanian SMEs Can Leverage AI in 2024</h2>
+                            <div class="d-flex align-items-center mb-3 text-muted">
+                                <i class="fas fa-user me-2"></i>
+                                <span class="me-4">By David Mwita</span>
+                                <i class="fas fa-calendar me-2"></i>
+                                <span>March 15, 2024</span>
+                            </div>
+                            <p class="lead">Artificial Intelligence is no longer just for large corporations. Tanzanian small and medium enterprises can now access affordable AI tools that can transform their operations, customer service, and decision-making processes.</p>
+                            
+                            <h5 class="mt-4">Key Takeaways for Tanzanian Businesses:</h5>
+                            <ul>
+                                <li><strong>AI Chatbots on WhatsApp:</strong> Customer service automation that works with Tanzania's most popular messaging platform</li>
+                                <li><strong>Affordable AI Tools:</strong> Solutions starting from TZS 200,000 per month</li>
+                                <li><strong>Local Language Support:</strong> AI systems that understand Swahili</li>
+                                <li><strong>Power Considerations:</strong> AI solutions optimized for Tanzania's power infrastructure</li>
+                            </ul>
+                            
+                            <div class="mt-4">
+                                <a href="#" class="btn btn-primary">Read Full Article</a>
+                                <span class="ms-3 text-muted">
+                                    <i class="far fa-eye me-1"></i> 1,245 views
+                                    <i class="far fa-comment ms-3 me-1"></i> 24 comments
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- More Articles -->
+                    <h3 class="mb-4">Latest Articles</h3>
+                    <div class="row g-4">
+                        <!-- Article 1 -->
+                        <div class="col-md-6">
+                            <div class="blog-card h-100">
+                                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80" 
+                                     class="img-fluid w-100" alt="Cybersecurity">
+                                <div class="p-4">
+                                    <span class="badge bg-danger mb-2">Security</span>
+                                    <h5>Cybersecurity Risks Facing Tanzanian Businesses in 2024</h5>
+                                    <p class="text-muted">Protect your business from the latest digital threats targeting Tanzanian companies.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small><i class="far fa-clock me-1"></i> 5 min read</small>
+                                        <a href="#" class="btn btn-sm btn-outline-primary">Read</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 2 -->
+                        <div class="col-md-6">
+                            <div class="blog-card h-100">
+                                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" 
+                                     class="img-fluid w-100" alt="Cloud Computing">
+                                <div class="p-4">
+                                    <span class="badge bg-info mb-2">Cloud</span>
+                                    <h5>Cloud vs Local Hosting: What's Best for Tanzanian Businesses?</h5>
+                                    <p class="text-muted">Comparing cloud solutions with local servers for Tanzanian internet conditions.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small><i class="far fa-clock me-1"></i> 7 min read</small>
+                                        <a href="#" class="btn btn-sm btn-outline-primary">Read</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 3 -->
+                        <div class="col-md-6">
+                            <div class="blog-card h-100">
+                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" 
+                                     class="img-fluid w-100" alt="Training">
+                                <div class="p-4">
+                                    <span class="badge bg-success mb-2">Training</span>
+                                    <h5>Essential ICT Skills Every Tanzanian Employee Should Have</h5>
+                                    <p class="text-muted">Building a digitally literate workforce for the Tanzanian market.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small><i class="far fa-clock me-1"></i> 6 min read</small>
+                                        <a href="#" class="btn btn-sm btn-outline-primary">Read</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 4 -->
+                        <div class="col-md-6">
+                            <div class="blog-card h-100">
+                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                                     class="img-fluid w-100" alt="Budget ICT">
+                                <div class="p-4">
+                                    <span class="badge bg-warning mb-2">Budget</span>
+                                    <h5>Low-Cost ICT Solutions for Tanzanian NGOs and Startups</h5>
+                                    <p class="text-muted">Affordable technology solutions for organizations with limited budgets.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small><i class="far fa-clock me-1"></i> 8 min read</small>
+                                        <a href="#" class="btn btn-sm btn-outline-primary">Read</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="blog-sidebar">
+                        <!-- Categories -->
+                        <h5 class="mb-4">Categories</h5>
+                        <div class="mb-4">
+                            <a href="#" class="d-block py-2 px-3 rounded mb-2 bg-white text-dark text-decoration-none">
+                                <i class="fas fa-robot me-2"></i>AI & Automation
+                                <span class="badge bg-primary float-end">12</span>
+                            </a>
+                            <a href="#" class="d-block py-2 px-3 rounded mb-2 bg-white text-dark text-decoration-none">
+                                <i class="fas fa-shield-alt me-2"></i>Cybersecurity
+                                <span class="badge bg-primary float-end">8</span>
+                            </a>
+                            <a href="#" class="d-block py-2 px-3 rounded mb-2 bg-white text-dark text-decoration-none">
+                                <i class="fas fa-cloud me-2"></i>Cloud & Infrastructure
+                                <span class="badge bg-primary float-end">15</span>
+                            </a>
+                            <a href="#" class="d-block py-2 px-3 rounded mb-2 bg-white text-dark text-decoration-none">
+                                <i class="fas fa-chalkboard-teacher me-2"></i>Training & Skills
+                                <span class="badge bg-primary float-end">10</span>
+                            </a>
+                            <a href="#" class="d-block py-2 px-3 rounded mb-2 bg-white text-dark text-decoration-none">
+                                <i class="fas fa-cogs me-2"></i>Business Solutions
+                                <span class="badge bg-primary float-end">20</span>
+                            </a>
+                        </div>
+
+                        <!-- Popular Posts -->
+                        <h5 class="mb-4">Popular Posts</h5>
+                        <div class="mb-4">
+                            <a href="#" class="d-flex align-items-center text-dark text-decoration-none mb-3">
+                                <div class="flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                         class="rounded" width="60" height="60" alt="Post thumb">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6 class="mb-0">Best ICT Practices for Tanzanian Offices</h6>
+                                    <small class="text-muted">Mar 10, 2024</small>
+                                </div>
+                            </a>
+                            <a href="#" class="d-flex align-items-center text-dark text-decoration-none mb-3">
+                                <div class="flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                         class="rounded" width="60" height="60" alt="Post thumb">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6 class="mb-0">Power Backup Solutions for Tanzanian Businesses</h6>
+                                    <small class="text-muted">Feb 28, 2024</small>
+                                </div>
+                            </a>
+                            <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
+                                <div class="flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                         class="rounded" width="60" height="60" alt="Post thumb">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6 class="mb-0">Budget ICT Setup for New Businesses</h6>
+                                    <small class="text-muted">Feb 15, 2024</small>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Newsletter -->
+                        <div class="bg-primary text-white p-4 rounded">
+                            <h5 class="mb-3">Subscribe to Our Newsletter</h5>
+                            <p class="small mb-3">Get monthly ICT tips and insights for Tanzanian businesses</p>
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Your email">
+                                <button class="btn btn-light" type="button">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
