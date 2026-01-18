@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanzania ICT & AI Solutions | Smart Business Technology</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --primary-dark: #0b5ed7;
+            --secondary: #ff6b00;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --success: #198754;
+            --tanzania-green: #1eb53a;
+            --tanzania-blue: #00a3dd;
+            --tanzania-yellow: #fcd116;
+            --tanzania-black: #000000;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 700;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--tanzania-green) !important;
+            font-size: 1.8rem;
+        }
+        
+        .navbar-brand span {
+            color: var(--tanzania-blue);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1518432031355-dfa7b3c8c35c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2067&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0 100px;
+        }
+        
+        .hero-section h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 8px;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+        
+        .btn-warning {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 8px;
+        }
+        
+        .btn-warning:hover {
+            background-color: #e05a00;
+            border-color: #e05a00;
+            color: white;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: var(--secondary);
+        }
+        
+        .center-title:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .service-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary), var(--tanzania-blue));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .service-icon i {
+            font-size: 30px;
+            color: white;
+        }
+        
+        .swahili-text {
+            color: var(--tanzania-green);
+            font-weight: 600;
+        }
+        
+        .tanzania-flag {
+            background: linear-gradient(to right, var(--tanzania-green) 33%, var(--tanzania-yellow) 33% 67%, var(--tanzania-black) 67%);
+            height: 6px;
+            width: 100%;
+            margin: 15px 0;
+        }
+        
+        .why-card {
+            border-left: 4px solid var(--tanzania-green);
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .industry-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .industry-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .industry-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(13, 110, 253, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .industry-icon i {
+            font-size: 24px;
+            color: var(--primary);
+        }
+        
+        .ai-questionnaire {
+            background: linear-gradient(135deg, #f5f7ff, #e3e9ff);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        
+        .form-step {
+            display: none;
+        }
+        
+        .form-step.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .result-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            display: none;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding-top: 60px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-section {
+                padding: 100px 0 70px;
+            }
+            
+            .ai-questionnaire {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/255000000000?text=Nina%20maswali%20kuhusu%20huduma%20za%20ICT%20na%20AI" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-robot me-2"></i>Tanzania<span>Tech</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ai">AI Consultation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#industries">Industries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-primary" href="#contact">Pata Ushauri</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1>Smart ICT & AI Solutions for Tanzanian Businesses</h1>
+                    <p class="lead mb-4">Consulting • Training • Infrastructure • Risk Assessment • AI Advisory</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#contact" class="btn btn-primary btn-lg">
+                            <i class="fas fa-phone-alt me-2"></i>Pata Ushauri wa ICT
+                        </a>
+                        <a href="#ai" class="btn btn-warning btn-lg">
+                            <i class="fas fa-robot me-2"></i>Book AI Consultation
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-5 mt-lg-0">
+                    <div class="bg-white rounded p-4 text-dark">
+                        <h4 class="mb-3">Why Tanzanian Businesses Choose Us</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Uelewa wa mazingira ya biashara ya Tanzania</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Practical & cost-effective solutions</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Support ya ndani + remote</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>AI solutions zinazofanya kazi kweli</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Local presence, global standards</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Snapshot -->
+    <section id="services" class="py-5">
+        <div class="container py-5">
+            <h2 class="section-title center-title text-center">Our Services for Tanzania</h2>
+            <div class="tanzania-flag mx-auto" style="max-width: 200px;"></div>
+            
+            <div class="row g-4 mt-4">
+                <!-- Service 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card p-4">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4>ICT Consulting & Development</h4>
+                        <p><span class="swahili-text">Tunasaidia:</span> ICT strategy kwa offices za Tanzania, mfumo wa network & servers, cloud & local hosting, software selection (ERP, HR, Accounting), digital transformation ya ofisi.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card p-4">
+                        <div class="service-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h4>Practical ICT Training</h4>
+                        <p><span class="swahili-text">Mafunzo ya Vitendo</span> kwa staff wa ofisi, IT officers, school & college labs, NGOs & projects. Topics: Office ICT skills, cybersecurity, network basics, AI tools kwa kazi za kila siku. <span class="swahili-text">📜 Certificate hutolewa</span></p>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card p-4">
+                        <div class="service-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h4>ICT Risk Assessment & Planning</h4>
+                        <p><span class="swahili-text">Tunaangalia:</span> Data loss risk, network vulnerabilities, power & backup risks (very important TZ), hardware lifespan, compliance & policies. <span class="swahili-text">📄 Unapata risk report, ICT improvement plan na bajeti inayolingana na mazingira ya TZ</span>.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card p-4">
+                        <div class="service-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h4>Infrastructure Management</h4>
+                        <p><span class="swahili-text">Huduma za kudumu:</span> Network monitoring, server & computer maintenance, software updates, backup & recovery. Monthly / yearly contracts available.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card p-4">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>Repair & ICT Technical Support</h4>
+                        <p>Computers & laptops, printers & scanners, network devices. On-site & remote support available throughout Tanzania.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card p-4">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4>AI Consultation for Tanzanian Businesses</h4>
+                        <p><span class="swahili-text">AI Tunazotekeleza:</span> AI chatbots (customer service / WhatsApp), office automation, data reporting & insights, AI for HR, sales & admin. <span class="swahili-text">👉 AI solutions zinazofaa bajeti za Tanzania</span>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Consultation Page -->
+    <section id="ai" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="section-title center-title text-center">Is Your Business Ready for AI?</h2>
+            <p class="text-center mb-5">Take our interactive questionnaire to find out which AI solutions are right for your Tanzanian business</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="ai-questionnaire">
+                        <div id="questionnaire">
+                            <div class="form-step active" id="step1">
+                                <h4 class="mb-4">1. What type of business do you have?</h4>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-check p-3 border rounded">
+                                            <input class="form-check-input" type="radio" name="businessType" id="sme" value="sme">
+                                            <label class="form-check-label fw-bold" for="sme">SME / Small Business</label>
+                                            <p class="small mt-1 mb-0">Less than 50 employees, local operations</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check p-3 border rounded">
+                                            <input class="form-check-input" type="radio" name="businessType" id="corporate" value="corporate">
+                                            <label class="form-check-label fw-bold" for="corporate">Corporate / Large Business</label>
+                                            <p class="small mt-1 mb-0">50+ employees, multiple locations</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check p-3 border rounded">
+                                            <input class="form-check-input" type="radio" name="businessType" id="education" value="education">
+                                            <label class="form-check-label fw-bold" for="education">School / University</label>
+                                            <p class="small mt-1 mb-0">Educational institution</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check p-3 border rounded">
+                                            <input class="form-check-input" type="radio" name="businessType" id="ngo" value="ngo">
+                                            <label class="form-check-label fw-bold" for="ngo">NGO / Government Office</label>
+                                            <p class="small mt-1 mb-0">Non-profit or public sector organization</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4 text-end">
+                                    <button class="btn btn-primary next-step" data-step="2">Next <i class="fas fa-arrow-right ms-1"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-step" id="step2">
+                                <h4 class="mb-4">2. How many staff do you have?</h4>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-check p-3 border rounded">
+                                            <input class="form-check-input" type="radio" name="staffSize" id="size1" value="1-10">
+                                            <label class="form-check-label fw-bold" for="size1">1-10 staff</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check p-3 border rounded">
+                                            <input class="form-check-input" type="radio" name="staffSize" id="size2" value="11-50">
+                                            <label class="form-check-label fw-bold" for="size2">11-50 staff</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check p-3 border rounded">
+                                            <input class="form-check-input" type="radio" name="staffSize" id="size3" value="51-200">
+                                            <label class="form-check-label fw-bold" for="size3">51-200 staff</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check p-3 border rounded">
+                                            <input class="form-check-input" type="radio" name="staffSize" id="size4" value="200+">
+                                            <label class="form-check-label fw-bold" for="size4">200+ staff</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4 d-flex justify-content-between">
+                                    <button class="btn btn-outline-secondary prev-step" data-step="1"><i class="fas fa-arrow-left me-1"></i> Back</button>
+                                    <button class="btn btn-primary next-step" data-step="3">Next <i class="fas fa-arrow-right ms-1"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-step" id="step3">
+                                <h4 class="mb-4">3. What are your main goals for AI/ICT implementation?</h4>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-check p-3 border rounded">
+                                            <input class="form-check-input" type="checkbox" name="goals" id="goal1" value="efficiency">
+                                            <label class="form-check-label fw-bold" for="goal1">Increase Efficiency</label>
+                                            <p class="small mt-1 mb-0">Automate repetitive tasks</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check p-3 border rounded">
+                                            <input class="form-check-input" type="checkbox" name="goals" id="goal2" value="data">
+                                            <label class="form-check-label fw-bold" for="goal2">Better Data Insights</label>
+                                            <p class="small mt-1 mb-0">Make better decisions with data</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check p-3 border rounded">
+                                            <input class="form-check-input" type="checkbox" name="goals" id="goal3" value="customer">
+                                            <label class="form-check-label fw-bold" for="goal3">Improve Customer Service</label>
+                                            <p class="small mt-1 mb-0">24/7 support with AI chatbots</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check p-3 border rounded">
+                                            <input class="form-check-input" type="checkbox" name="goals" id="goal4" value="security">
+                                            <label class="form-check-label fw-bold" for="goal4">Enhance Security</label>
+                                            <p class="small mt-1 mb-0">Protect data and systems</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4 d-flex justify-content-between">
+                                    <button class="btn btn-outline-secondary prev-step" data-step="2"><i class="fas fa-arrow-left me-1"></i> Back</button>
+                                    <button class="btn btn-warning" id="getRecommendation">Get AI Recommendation</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="result-card mt-5" id="result">
+                            <h3 class="text-center mb-4">Your AI Readiness Recommendation</h3>
+                            <div id="recommendationContent">
+                                <!-- Content will be dynamically inserted here -->
+                            </div>
+                            <div class="text-center mt-4">
+                                <a href="#contact" class="btn btn-primary btn-lg">Book AI Strategy Session</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section id="industries" class="py-5">
+        <div class="container py-5">
+            <h2 class="section-title center-title text-center">Industries We Serve in Tanzania</h2>
+            <p class="text-center mb-5">We provide tailored ICT and AI solutions for these key sectors in Tanzania</p>
+            
+            <div class="row g-4">
+                <!-- Industry 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4>Offices & Corporates</h4>
+                        <p>ICT infrastructure, network security, office automation, ERP systems, and AI solutions for Tanzanian businesses of all sizes.</p>
+                    </div>
+                </div>
+                
+                <!-- Industry 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <h4>Schools & Colleges</h4>
+                        <p>Computer lab setup, ICT training for teachers and students, educational software, and learning management systems.</p>
+                    </div>
+                </div>
+                
+                <!-- Industry 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h4>NGOs & Projects</h4>
+                        <p>Cost-effective ICT solutions, data management systems, project monitoring tools, and donor reporting systems.</p>
+                    </div>
+                </div>
+                
+                <!-- Industry 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <h4>Healthcare Facilities</h4>
+                        <p>Hospital management systems, patient records digitization, telemedicine solutions, and medical equipment ICT support.</p>
+                    </div>
+                </div>
+                
+                <!-- Industry 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h4>Retail & Logistics</h4>
+                        <p>Point of sale systems, inventory management, e-commerce solutions, and supply chain optimization with AI.</p>
+                    </div>
+                </div>
+                
+                <!-- Industry 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <h4>Government & Institutions</h4>
+                        <p>Secure ICT infrastructure, digital transformation, citizen service portals, and data management for public institutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="section-title center-title text-center">Contact Us</h2>
+            <p class="text-center mb-5">Get in touch with our team for ICT and AI solutions tailored for Tanzania</p>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div class="mb-3">
+                                        <i class="fas fa-phone-alt fa-2x text-primary"></i>
+                                    </div>
+                                    <h4>Call Us</h4>
+                                    <p class="mb-2">+255 123 456 789</p>
+                                    <p>+255 987 654 321</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div class="mb-3">
+                                        <i class="fab fa-whatsapp fa-2x text-success"></i>
+                                    </div>
+                                    <h4>WhatsApp</h4>
+                                    <p class="mb-2">+255 123 456 789</p>
+                                    <a href="https://wa.me/255123456789" class="btn btn-success btn-sm mt-2">Message Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card border-0 shadow-sm mt-4">
+                        <div class="card-body p-4">
+                            <h4 class="text-center mb-4">Send us a Message</h4>
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="service" class="form-label">Service Interested In</label>
+                                    <select class="form-select" id="service">
+                                        <option value="ict">ICT Consulting</option>
+                                        <option value="ai">AI Consultation</option>
+                                        <option value="training">ICT Training</option>
+                                        <option value="risk">Risk Assessment</option>
+                                        <option value="infrastructure">Infrastructure Management</option>
+                                        <option value="repair">Repair & Support</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                </div>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                                    <button type="submit" class="btn btn-primary btn-lg px-5">Send Message</button>
+                                    <button type="button" class="btn btn-outline-primary btn-lg px-5" id="requestAudit">Request ICT Audit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="mb-3">Tanzania<span>Tech</span></h3>
+                    <p>Providing smart ICT and AI solutions for Tanzanian businesses, schools, NGOs, and government offices since 2020.</p>
+                    <p class="mt-3"><i class="fas fa-map-marker-alt me-2"></i> Dar es Salaam, Tanzania</p>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <div class="footer-links">
+                        <p><a href="#home">Home</a></p>
+                        <p><a href="#services">Services</a></p>
+                        <p><a href="#ai">AI Consultation</a></p>
+                        <p><a href="#industries">Industries</a></p>
+                        <p><a href="#contact">Contact</a></p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">Our Services</h5>
+                    <div class="footer-links">
+                        <p><a href="#services">ICT Consulting & Development</a></p>
+                        <p><a href="#services">Practical ICT Training</a></p>
+                        <p><a href="#services">ICT Risk Assessment</a></p>
+                        <p><a href="#services">Infrastructure Management</a></p>
+                        <p><a href="#services">AI Consultation</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4" style="border-color: #444;">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 TanzaniaTech. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>Made with <i class="fas fa-heart text-danger"></i> for Tanzanian businesses</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // AI Questionnaire Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const nextButtons = document.querySelectorAll('.next-step');
+            const prevButtons = document.querySelectorAll('.prev-step');
+            const getRecommendationBtn = document.getElementById('getRecommendation');
+            const resultCard = document.getElementById('result');
+            const recommendationContent = document.getElementById('recommendationContent');
+            
+            // Next step functionality
+            nextButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const nextStep = this.getAttribute('data-step');
+                    const currentStep = this.closest('.form-step').id.replace('step', '');
+                    
+                    document.getElementById(`step${currentStep}`).classList.remove('active');
+                    document.getElementById(`step${nextStep}`).classList.add('active');
+                });
+            });
+            
+            // Previous step functionality
+            prevButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const prevStep = this.getAttribute('data-step');
+                    const currentStep = this.closest('.form-step').id.replace('step', '');
+                    
+                    document.getElementById(`step${currentStep}`).classList.remove('active');
+                    document.getElementById(`step${prevStep}`).classList.add('active');
+                });
+            });
+            
+            // Get recommendation
+            getRecommendationBtn.addEventListener('click', function() {
+                const businessType = document.querySelector('input[name="businessType"]:checked');
+                const staffSize = document.querySelector('input[name="staffSize"]:checked');
+                const goals = document.querySelectorAll('input[name="goals"]:checked');
+                
+                if (!businessType || !staffSize || goals.length === 0) {
+                    alert('Please answer all questions before getting a recommendation.');
+                    return;
+                }
+                
+                // Show result
+                resultCard.style.display = 'block';
+                resultCard.scrollIntoView({ behavior: 'smooth' });
+                
+                // Generate recommendation based on answers
+                let recommendation = '';
+                let title = '';
+                let level = '';
+                
+                // Determine recommendation level
+                if (businessType.value === 'sme' || businessType.value === 'ngo') {
+                    if (staffSize.value === '1-10' || staffSize.value === '11-50') {
+                        title = 'Basic AI Tools';
+                        level = 'basic';
+                        recommendation = `
+                            <div class="alert alert-info">
+                                <h5><i class="fas fa-lightbulb me-2"></i> Recommendation: Start with Basic AI Tools</h5>
+                                <p>Based on your business size and type, we recommend starting with affordable, practical AI tools that can make an immediate impact:</p>
+                                <ul>
+                                    <li><strong>AI Chatbots</strong> for customer service on WhatsApp and your website</li>
+                                    <li><strong>Automated Reporting</strong> tools to save time on data entry</li>
+                                    <li><strong>Basic Office Automation</strong> for repetitive tasks</li>
+                                    <li><strong>AI-powered scheduling</strong> and email management</li>
+                                </ul>
+                                <p class="mb-0"><span class="swahili-text">Bei nafuu, matumizi rahisi</span> - These solutions are budget-friendly and easy to implement for Tanzanian SMEs.</p>
+                            </div>
+                        `;
+                    } else {
+                        title = 'Advanced Automation';
+                        level = 'advanced';
+                        recommendation = `
+                            <div class="alert alert-warning">
+                                <h5><i class="fas fa-rocket me-2"></i> Recommendation: Advanced Automation</h5>
+                                <p>Your business is ready for more advanced AI solutions that can transform operations:</p>
+                                <ul>
+                                    <li><strong>Integrated AI Systems</strong> for sales, HR, and customer relationship management</li>
+                                    <li><strong>Predictive Analytics</strong> for better business decision-making</li>
+                                    <li><strong>Custom AI Solutions</strong> tailored to your specific industry needs</li>
+                                    <li><strong>Full Office Automation</strong> with AI-powered workflows</li>
+                                </ul>
+                                <p class="mb-0"><span class="swahili-text">Mfumo kamili wa AI</span> - We can implement a comprehensive AI strategy that grows with your business.</p>
+                            </div>
+                        `;
+                    }
+                } else if (businessType.value === 'education') {
+                    title = 'Educational AI Solutions';
+                    level = 'education';
+                    recommendation = `
+                        <div class="alert alert-success">
+                            <h5><i class="fas fa-graduation-cap me-2"></i> Recommendation: Educational AI Solutions</h5>
+                            <p>For schools and universities in Tanzania, we recommend these AI-powered educational tools:</p>
+                            <ul>
+                                <li><strong>AI Learning Platforms</strong> that adapt to student needs</li>
+                                <li><strong>Automated Grading Systems</strong> for teachers</li>
+                                <li><strong>Student Performance Analytics</strong> to identify areas for improvement</li>
+                                <li><strong>Virtual Lab Assistants</strong> for computer labs</li>
+                                <li><strong>AI-powered Research Tools</strong> for students and faculty</li>
+                            </ul>
+                            <p class="mb-0"><span class="swahili-text">Teknolojia ya kisasa kwa elimu</span> - Modern AI tools designed for Tanzanian educational institutions.</p>
+                        </div>
+                    `;
+                } else {
+                    title = 'Enterprise AI Solutions';
+                    level = 'enterprise';
+                    recommendation = `
+                        <div class="alert alert-primary">
+                            <h5><i class="fas fa-chess-queen me-2"></i> Recommendation: Enterprise AI Solutions</h5>
+                            <p>For larger corporations and government offices in Tanzania, we recommend comprehensive AI transformation:</p>
+                            <ul>
+                                <li><strong>Enterprise AI Platforms</strong> that integrate with existing systems</li>
+                                <li><strong>AI-powered Data Analytics</strong> for strategic decision-making</li>
+                                <li><strong>Process Automation</strong> across departments</li>
+                                <li><strong>AI Security Systems</strong> to protect sensitive data</li>
+                                <li><strong>Custom AI Development</strong> for unique business needs</li>
+                            </ul>
+                            <p class="mb-0"><span class="swahili-text">Ufanisi na usalimi wa hali ya juu</span> - Enterprise-grade solutions with local Tanzanian support.</p>
+                        </div>
+                    `;
+                }
+                
+                recommendationContent.innerHTML = recommendation;
+            });
+            
+            // Contact form submission
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will contact you within 24 hours.');
+                this.reset();
+            });
+            
+            // Request audit button
+            document.getElementById('requestAudit').addEventListener('click', function() {
+                document.getElementById('service').value = 'risk';
+                document.getElementById('message').value = 'I would like to request an ICT Risk Assessment and Audit for my business. Please contact me with more details.';
+                document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
